@@ -7,6 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="icon" href="{{asset('img/app/logo.png')}}"> 
         @include('layouts.head_link')
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="flex">
-                            <a class="t_button" href="#">Ver propiedad</a>
+                            <a class="t_button" href="{{route('propiedad', $property->id)}}">Ver propiedad</a>
                         </div>
                     </div>
 
