@@ -9,8 +9,11 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+        <link href="https://fonts.bunny.net/css?family=figtree:200,300,400,500,600&display=swap" rel="stylesheet" />
+        
+        <!-- FontAwesome -->
+        <link href="{{ asset('libs/fontawesome-free-6.3.0-web/css/all.min.css') }}" rel="stylesheet" type="text/css" />
+        @livewireStyles()
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -18,5 +21,6 @@
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+        @livewireScripts()
     </body>
 </html>

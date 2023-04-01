@@ -10,22 +10,52 @@
             @csrf
 
             <div>
-                <x-label for="name" value="{{ __('Name') }}" />
+                <x-label for="name" value="{{ __('Nombre') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
-            <div class="mt-4">
+            <div>
+                <x-label for="last_name" value="{{ __('Apellido') }}" />
+                <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autocomplete="last_name" />
+            </div>
+
+            <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
+            <div>
+                <x-label for="document" value="{{ __('Documento') }}" />
+                <x-input id="document" class="block mt-1 w-full" type="text" name="document" :value="old('document')" required autocomplete="username" />
+            </div>
+
+            <div>
+                <x-label for="adress" value="{{ __('Direccion') }}" />
+                <x-input id="adress" class="block mt-1 w-full" type="text" name="adress" :value="old('adress')" required autocomplete="username" />
+            </div>
+
+            <div>
+                <x-label for="phone" value="{{ __('Telefono') }}" />
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autocomplete="username" />
+            </div>
+
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
+                <x-label for="rol" value="{{ __('Rol') }}" />
+                <select class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full" name="rol" id="rol">
+                    <option value="">-- Seleccionar --</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Usuario</option>
+                    <option value="3">Cliente</option>
+                </select>
+            </div>
+
+            <div class="mt-4">
+                <x-label for="password" value="{{ __('Clave') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-label for="password_confirmation" value="{{ __('Confirmar clave') }}" />
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
@@ -48,11 +78,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Ya tienes cuenta?') }}
                 </a>
 
                 <x-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Registrar') }}
                 </x-button>
             </div>
         </form>

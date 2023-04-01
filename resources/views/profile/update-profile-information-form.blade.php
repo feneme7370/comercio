@@ -54,9 +54,16 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="name" value="{{ __('Name') }}" />
+            <x-label for="name" value="{{ __('Nombre') }}" />
             <x-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
+        </div>
+
+        <!-- Last_name -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="last_name" value="{{ __('Apellido') }}" />
+            <x-input id="last_name" type="text" class="mt-1 block w-full" wire:model.defer="state.last_name" autocomplete="last_name" />
+            <x-input-error for="last_name" class="mt-2" />
         </div>
 
         <!-- Email -->
@@ -80,6 +87,38 @@
                     </p>
                 @endif
             @endif
+        </div>
+
+        <!-- document -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="document" value="{{ __('Documento') }}" />
+            <x-input id="document" type="text" class="mt-1 block w-full" wire:model.defer="state.document" autocomplete="document" />
+            <x-input-error for="document" class="mt-2" />
+        </div>
+
+        <!-- adress -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="adress" value="{{ __('Direccion') }}" />
+            <x-input id="adress" type="text" class="mt-1 block w-full" wire:model.defer="state.adress" autocomplete="adress" />
+            <x-input-error for="adress" class="mt-2" />
+        </div>
+
+        <!-- phone -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="phone" value="{{ __('Telefono') }}" />
+            <x-input id="phone" type="text" class="mt-1 block w-full" wire:model.defer="state.phone" autocomplete="phone" />
+            <x-input-error for="phone" class="mt-2" />
+        </div>
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="rol" value="{{ __('Rol') }}" />
+            <select class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full" name="rol" id="rol" wire:model.defer="state.rol">
+                <option value="">-- Seleccionar --</option>
+                <option value="1">Admin</option>
+                <option value="2">Usuario</option>
+                <option value="3">Cliente</option>
+            </select>
+            <x-input-error for="rol" class="mt-2" />
         </div>
     </x-slot>
 
